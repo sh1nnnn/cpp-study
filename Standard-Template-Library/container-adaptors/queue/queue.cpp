@@ -3,37 +3,38 @@
 #include <iostream>
 #include <queue>
 
-using namespace std;
-
 // Print the queue
-void showq(queue<int> gq)
-{
-	queue<int> g = gq;
-	while (!g.empty()) {
-		cout << '\t' << g.front();
-		g.pop();
+void showQueueElements(std::queue<int> queue) {
+	std::queue<int> queueTemp = queue;
+	while (!queueTemp.empty()) {
+		std::cout << '\t' << queueTemp.front();
+		queueTemp.pop();
 	}
-	cout << '\n';
+	std::cout << std::endl;
 }
 
 // Driver Code
-int main()
-{
-	queue<int> gquiz;
-	gquiz.push(10);
-	gquiz.push(20);
-	gquiz.push(30);
+int main() {
+    int items[] = {10, 20, 30, 40, 50, 60};
+    std::queue<int> queue;
 
-	cout << "The queue gquiz is : ";
-	showq(gquiz);
+    std::cout << "sizeof(items)/sizeof(int) : " << sizeof(items)/sizeof(int) << std::endl;
 
-	cout << "\ngquiz.size() : " << gquiz.size();
-	cout << "\ngquiz.front() : " << gquiz.front();
-	cout << "\ngquiz.back() : " << gquiz.back();
+    for(int i = 0; i < sizeof(items)/sizeof(int); i++) {
+        std::cout << "items[i] : " << items[i] << std::endl;
+        queue.push(items[i]);
+    }
 
-	cout << "\ngquiz.pop() : ";
-	gquiz.pop();
-	showq(gquiz);
+    std::cout << "queue.size() : " << queue.size() << std::endl;
+    std::cout << "queue.front() : " << queue.front() << std::endl;
+    std::cout << "queue.back() : " << queue.back() << std::endl;
 
-	return 0;
+    queue.pop();
+    std::cout << "queue.pop()" << std::endl;
+    std::cout << "queue.front() : " << queue.front() << std::endl;
+    std::cout << "queue.back() : " << queue.back() << std::endl;
+
+    showQueueElements(queue);
+
+    return 0;
 }
