@@ -15,7 +15,7 @@ int main()
         std::cout << vect[i] << " ";
  
     // Sorting the Vector in Ascending order
-    sort(vect.begin(), vect.end());
+    std::sort(vect.begin(), vect.end());
  
    
     std::cout << "\nVector after sorting is: ";
@@ -47,6 +47,6 @@ int main()
     // Starting the summation from 0
     std::cout << "\nThe summation of vector elements is: ";
     std::cout << accumulate(vect.begin(), vect.end(), 0);
- 
+
     return 0;
 }
