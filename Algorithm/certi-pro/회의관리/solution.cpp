@@ -2,6 +2,9 @@
 #include <string>
 #include <unordered_map>
 
+#define CLOSEMEETING 0
+#define OPENMEETING 1
+
 struct MEETING
 {
     std::string name;
@@ -9,7 +12,7 @@ struct MEETING
     int endTime;
     int state;
     std::set<int> members;
-}meeting[10001];
+}meetings[10001];
 
 int meetingCertiPointer;
 unordered_map <string, int> meetingCerti;
@@ -24,12 +27,15 @@ void init()
 int addMeeting(char mMeeting[MAXL], int M, char mMemberList[MAXM][MAXL], int mStartTime, int mEndTime)
 {
     int meetingIdx = meetingCerti[mMeeting] = ++meetingCertiPointer;
-    meeting[meetingIdx].name = mMeeting;
-    meeting[meetingIdx].startTime = mStartTime;
-    meeting[meetingIdx].endTime = mEndTime;
-    meeting[meetingIdx].state = 1;
-    meeting[meetingIdx].members = mEndTime;
+    meetings[meetingIdx].name = mMeeting;
+    meetings[meetingIdx].startTime = mStartTime;
+    meetings[meetingIdx].endTime = mEndTime;
+    meetings[meetingIdx].state = OPENMEETING;
+    meetings[meetingIdx].members.clear();
+
     
+    
+
 
 }
 
