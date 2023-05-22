@@ -1,0 +1,4 @@
+﻿  solution.cpp
+C:\sh1nn\cpp-study\vs\삼국지게임\삼국지게임\solution.cpp(42,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\sh1nn\cpp-study\vs\삼국지게임\삼국지게임\solution.cpp(178,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  삼국지게임.vcxproj -> C:\sh1nn\cpp-study\vs\삼국지게임\x64\Debug\삼국지게임.exe
